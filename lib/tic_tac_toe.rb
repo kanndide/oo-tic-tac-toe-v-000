@@ -94,6 +94,10 @@ WIN_COMBINATIONS = [
     end
   end
 
+  def play
+
+  end
+
 end
 
 
