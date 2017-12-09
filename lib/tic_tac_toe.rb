@@ -35,7 +35,7 @@ WIN_COMBINATIONS = [
     @board.count{|token| token == "X" || token == "O"}
   end
 
-  def move(@board, token = "X")
+  def move(token = "X")
     token == "X" || "O"
     @board[index] = token
   end
