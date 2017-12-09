@@ -43,6 +43,14 @@ WIN_COMBINATIONS = [
     !(@board[index].nil? || @board[index] == " ")
   end
 
+  def valid_move?(index)
+    if index.between?(0, 8) == false
+      false
+    elsif position_taken?(index) == false
+      true
+    end
+  end
+
 end
 
 
