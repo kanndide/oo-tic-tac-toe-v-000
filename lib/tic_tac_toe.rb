@@ -95,7 +95,15 @@ WIN_COMBINATIONS = [
   end
 
   def play
-
+    until over? == true
+      turn
+    end
+    if winner != nil
+      puts "Congratulations #{winner}!"
+    end
+    if draw? == true
+      puts "Cat's Game!"
+    end
   end
 
 end
