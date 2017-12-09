@@ -106,3 +106,5 @@ WIN_COMBINATIONS = [
     end
   end
 end
+
+TicTacToe.play
