@@ -76,6 +76,12 @@ WIN_COMBINATIONS = [
     @board.include?(" ") == false
   end
 
+  def draw?
+    if won? == false && full? == true
+      true
+    end
+  end
+
 end
 
 
