@@ -23,5 +23,10 @@ WIN_COMBINATIONS = [
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
+  def input_to_index(user_input)
+    user_input = gets.strip
+    user_input = user_input - 1    
+  end
+
 
 end
