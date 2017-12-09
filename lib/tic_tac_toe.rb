@@ -35,9 +35,9 @@ WIN_COMBINATIONS = [
     @board.count{|token| token == "X" || token == "O"}
   end
 
-  def move(token = "X")
-    token == "X" || "O"
-    @board[index] = token
+  def move
+  index  = input_to_index(user_input)
+  @board[index] = current_player
   end
 
 
