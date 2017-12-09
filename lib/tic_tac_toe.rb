@@ -86,6 +86,14 @@ WIN_COMBINATIONS = [
    draw? == true || won? != false
   end
 
+  def winner
+    if won?.is_a?(Array)
+      return @board[won?[0]]
+    else
+       nil
+    end
+  end
+
 end
 
 
