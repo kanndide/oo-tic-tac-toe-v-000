@@ -35,15 +35,20 @@ WIN_COMBINATIONS = [
     @board.count{|token| token == "X" || token == "O"}
   end
 
-  def turn(@board)
-    puts "Please enter 1-9:"
-    user_input = gets.strip
-    index = input_to_index(user_input)
-    if valid_move?(board, index) == true
-      move(board, index, "#{current_player(board)}")
-      display_board(board)
-    else
-      turn(board)
+  def move(@board, token = "X")
+    token == "X" || "O"
+    @board[index] = token
+  end
+
+  def position_taken?(@board, index)
+      !(board[index].nil? || board[index] == " ")
+  end
+
+  def valid_move?(@board, index)
+    if index.between?(0, 8) == false
+      false
+    elsif position_taken?(board, index) == false
+      true
     end
   end
 
